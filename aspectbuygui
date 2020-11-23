@@ -1,3 +1,112 @@
+local prefix = "!" -- change prefix here
+local LPlayer = game.Players.LocalPlayer
+LPlayer.Chatted:Connect(function(msg)
+    msg = msg:lower()
+    if string.sub(msg,1,3) == "? " then
+        msg = string.sub(msg,4)
+    end
+    if string.sub(msg,1,1) == prefix then
+        local cmd
+        local space = string.find(msg," ")
+        if space then
+            cmd = string.sub(msg,2,space-1)
+        else
+            cmd = string.sub(msg,2)
+        end
+
+        if cmd == "print" then
+            local var = string.sub(msg,space+1)
+            print(var)
+        end
+        if cmd == "commandhere" then -- example 
+            
+        end
+        if cmd == "to" then
+            local var    = string.sub(msg,space+1)
+            local target = GetPlayer(var)
+
+            -- a player's character is basically the model in the workspace and the humanoidrootpart is kinda like the main part to move around with, you can change the cframe of it to another player's humanoidrootpart to teleport to them
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame
+        end
+
+    end
+end)
+
+function GetPlayer(String)
+    local plr
+    local strl = String:lower()
+    for i, v in pairs(game:GetService("Players"):GetPlayers()) do
+        if v.Name:lower():sub(1, #String) == String:lower() then
+            plr = v
+        end 
+    end
+    if String == "me" then
+        plr = game.Players.LocalPlayer
+    end
+    if String == "" or String == " " then
+        plr = nil
+    end
+    return plr
+end
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Aspect";
+    Text = " Say !to [PlayerName] ";
+    Duration = 15;
+})
+
+local prefix = "!" -- change prefix here
+local LPlayer = game.Players.LocalPlayer
+LPlayer.Chatted:Connect(function(msg)
+    msg = msg:lower()
+    if string.sub(msg,1,3) == "? " then
+        msg = string.sub(msg,4)
+    end
+    if string.sub(msg,1,1) == prefix then
+        local cmd
+        local space = string.find(msg," ")
+        if space then
+            cmd = string.sub(msg,2,space-1)
+        else
+            cmd = string.sub(msg,2)
+        end
+
+        if cmd == "print" then
+            local var = string.sub(msg,space+1)
+            print(var)
+        end
+        if cmd == "commandhere" then -- example 
+            
+        end
+        if cmd == "mask" then
+
+            -- a player's character is basically the model in the workspace and the humanoidrootpart is kinda like the main part to move around with, you can change the cframe of it to another player's humanoidrootpart to teleport to them
+local savepos = game.Players.LocalPlayer.Character.UpperTorso.Position
+local lol = game.Workspace.Ignored.Shop["[Surgeon Mask] - $25"]
+game.Players.LocalPlayer.Character:MoveTo(lol.Head.Position)
+wait(0.25)
+fireclickdetector(lol.ClickDetector,4)
+wait(0.25)
+if game.Players.LocalPlayer.Backpack:FindFirstChild("Mask") then
+        game.Players.LocalPlayer.Backpack:FindFirstChild("Mask").Parent = game.Players.LocalPlayer.Character
+end
+wait()
+game.Players.LocalPlayer.Character.Mask:Activate()
+game.Players.LocalPlayer.Character:MoveTo(savepos)
+        end
+
+    end
+end)
+
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Aspect";
+    Text = " !mask Loaded ";
+    Duration = 15;
+})
+
+
+
+
 local ScreenGui = Instance.new("ScreenGui")
 local BuyFrame = Instance.new("Frame")
 local ShotGun = Instance.new("TextButton")
@@ -230,6 +339,9 @@ TextLabel.TextColor3 = Color3.new(1, 1, 0.498039)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14
 TextLabel.TextWrapped = true
+
+
+
 
 local Toggled = false
 game:GetService("UserInputService").InputBegan:connect(function(Key, g)
