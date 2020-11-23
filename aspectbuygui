@@ -1,0 +1,247 @@
+local ScreenGui = Instance.new("ScreenGui")
+local BuyFrame = Instance.new("Frame")
+local ShotGun = Instance.new("TextButton")
+local smg = Instance.new("TextButton")
+local rpg = Instance.new("TextButton")
+local silencer = Instance.new("TextButton")
+local p90 = Instance.new("TextButton")
+local ak47 = Instance.new("TextButton")
+local tactical = Instance.new("TextButton")
+local ar = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local ar_2 = Instance.new("TextButton")
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+
+
+
+BuyFrame.Name = "BuyFrame"
+BuyFrame.Parent = ScreenGui
+BuyFrame.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+BuyFrame.BorderColor3 = Color3.new(1, 1, 0)
+BuyFrame.Position = UDim2.new(0.04209622, 0, 0.563882053, 0)
+BuyFrame.Size = UDim2.new(0, 214, 0, 245)
+
+
+ShotGun.Name = "ShotGun"
+ShotGun.Parent = BuyFrame
+ShotGun.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+ShotGun.BorderColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+ShotGun.Position = UDim2.new(0.0353535339, 0, 0.179039299, 0)
+ShotGun.Size = UDim2.new(0, 97, 0, 39)
+ShotGun.Font = Enum.Font.Gotham
+ShotGun.Text = "BuyShotgun"
+ShotGun.TextColor3 = Color3.new(1, 1, 0.498039)
+ShotGun.TextSize = 14
+ShotGun.MouseButton1Down:connect(function()
+local savepos = game.Players.LocalPlayer.Character.UpperTorso.Position
+local lol = game.Workspace.Ignored.Shop["[Shotgun] - $1250"]
+game.Players.LocalPlayer.Character:MoveTo(lol.Head.Position)
+wait(0.25)
+fireclickdetector(lol.ClickDetector,4)
+wait(0.25)
+if game.Players.LocalPlayer.Backpack:FindFirstChild("Gun") then
+        game.Players.LocalPlayer.Backpack:FindFirstChild("Gun").Parent = game.Players.LocalPlayer.Character
+end
+wait()
+game.Players.LocalPlayer.Character:MoveTo(savepos)
+end)
+ 
+
+smg.Name = "smg"
+smg.Parent = BuyFrame
+smg.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+smg.BorderColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+smg.Position = UDim2.new(0.525252521, 0, 0.179039299, 0)
+smg.Size = UDim2.new(0, 97, 0, 39)
+smg.Font = Enum.Font.Gotham
+smg.Text = "Buy SMG"
+smg.TextColor3 = Color3.new(1, 1, 0.498039)
+smg.TextSize = 14
+smg.MouseButton1Down:connect(function()
+local savepos = game.Players.LocalPlayer.Character.UpperTorso.Position
+local lol = game.Workspace.Ignored.Shop["[SMG] - $750"]
+game.Players.LocalPlayer.Character:MoveTo(lol.Head.Position)
+wait(0.25)
+fireclickdetector(lol.ClickDetector,4)
+wait(0.25)
+if game.Players.LocalPlayer.Backpack:FindFirstChild("Gun") then
+        game.Players.LocalPlayer.Backpack:FindFirstChild("Gun").Parent = game.Players.LocalPlayer.Character
+end
+wait()
+game.Players.LocalPlayer.Character:MoveTo(savepos)
+end)
+ 
+
+rpg.Name = "rpg"
+rpg.Parent = BuyFrame
+rpg.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+rpg.BorderColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+rpg.Position = UDim2.new(0.0345983207, 0, 0.349344969, 0)
+rpg.Size = UDim2.new(0, 97, 0, 39)
+rpg.Font = Enum.Font.Gotham
+rpg.Text = "Buy RPG"
+rpg.TextColor3 = Color3.new(1, 1, 0.498039)
+rpg.TextSize = 14
+rpg.MouseButton1Down:connect(function()
+local savepos = game.Players.LocalPlayer.Character.UpperTorso.Position
+local lol = game.Workspace.Ignored.Shop["[RPG] - $6000"]
+game.Players.LocalPlayer.Character:MoveTo(lol.Head.Position)
+wait(0.25)
+fireclickdetector(lol.ClickDetector,4)
+wait(0.25)
+if game.Players.LocalPlayer.Backpack:FindFirstChild("Gun") then
+        game.Players.LocalPlayer.Backpack:FindFirstChild("Gun").Parent = game.Players.LocalPlayer.Character
+end
+wait()
+game.Players.LocalPlayer.Character:MoveTo(savepos)
+end)
+
+silencer.Name = "silencer"
+silencer.Parent = BuyFrame
+silencer.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+silencer.BorderColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+silencer.Position = UDim2.new(0.487869352, 0, 0.349344969, 0)
+silencer.Size = UDim2.new(0, 97, 0, 39)
+silencer.Font = Enum.Font.Gotham
+silencer.Text = "Buy Silencer"
+silencer.TextColor3 = Color3.new(1, 1, 0.498039)
+silencer.TextSize = 14
+silencer.MouseButton1Down:connect(function()
+local savepos = game.Players.LocalPlayer.Character.UpperTorso.Position
+local lol = game.Workspace.Ignored.Shop["[Silencer] - $550"]
+game.Players.LocalPlayer.Character:MoveTo(lol.Head.Position)
+wait(0.25)
+fireclickdetector(lol.ClickDetector,4)
+wait(0.25)
+if game.Players.LocalPlayer.Backpack:FindFirstChild("Gun") then
+        game.Players.LocalPlayer.Backpack:FindFirstChild("Gun").Parent = game.Players.LocalPlayer.Character
+end
+wait()
+game.Players.LocalPlayer.Character:MoveTo(savepos)
+end)
+
+p90.Name = "p90"
+p90.Parent = BuyFrame
+p90.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+p90.BorderColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+p90.Position = UDim2.new(0.0345983207, 0, 0.519650638, 0)
+p90.Size = UDim2.new(0, 97, 0, 39)
+p90.Font = Enum.Font.Gotham
+p90.Text = "Buy P90"
+p90.TextColor3 = Color3.new(1, 1, 0.498039)
+p90.TextSize = 14
+p90.MouseButton1Down:connect(function()
+local savepos = game.Players.LocalPlayer.Character.UpperTorso.Position
+local lol = game.Workspace.Ignored.Shop["[P90] - $1000"]
+game.Players.LocalPlayer.Character:MoveTo(lol.Head.Position)
+wait(0.25)
+fireclickdetector(lol.ClickDetector,4)
+wait(0.25)
+if game.Players.LocalPlayer.Backpack:FindFirstChild("Gun") then
+        game.Players.LocalPlayer.Backpack:FindFirstChild("Gun").Parent = game.Players.LocalPlayer.Character
+end
+wait()
+game.Players.LocalPlayer.Character:MoveTo(savepos)
+end)
+
+ak47.Name = "ak47"
+ak47.Parent = BuyFrame
+ak47.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+ak47.BorderColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+ak47.Position = UDim2.new(0.487869352, 0, 0.519650638, 0)
+ak47.Size = UDim2.new(0, 97, 0, 39)
+ak47.Font = Enum.Font.Gotham
+ak47.Text = "Buy AK47"
+ak47.TextColor3 = Color3.new(1, 1, 0.498039)
+ak47.TextSize = 14
+ak47.MouseButton1Down:connect(function()
+local savepos = game.Players.LocalPlayer.Character.UpperTorso.Position
+local lol = game.Workspace.Ignored.Shop["[AK47] - $2250"]
+game.Players.LocalPlayer.Character:MoveTo(lol.Head.Position)
+wait(0.25)
+fireclickdetector(lol.ClickDetector,4)
+wait(0.25)
+if game.Players.LocalPlayer.Backpack:FindFirstChild("Gun") then
+        game.Players.LocalPlayer.Backpack:FindFirstChild("Gun").Parent = game.Players.LocalPlayer.Character
+end
+wait()
+game.Players.LocalPlayer.Character:MoveTo(savepos)
+end)
+
+tactical.Name = "tactical"
+tactical.Parent = BuyFrame
+tactical.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+tactical.BorderColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+tactical.Position = UDim2.new(0.0345983207, 0, 0.689956307, 0)
+tactical.Size = UDim2.new(0, 97, 0, 39)
+tactical.Font = Enum.Font.Gotham
+tactical.Text = "Buy Tactical"
+tactical.TextColor3 = Color3.new(1, 1, 0.498039)
+tactical.TextSize = 14
+tactical.MouseButton1Down:connect(function()
+local savepos = game.Players.LocalPlayer.Character.UpperTorso.Position
+local lol = game.Workspace.Ignored.Shop["[TacticalShotgun] - $1750"]
+game.Players.LocalPlayer.Character:MoveTo(lol.Head.Position)
+wait(0.25)
+fireclickdetector(lol.ClickDetector,4)
+wait(0.25)
+if game.Players.LocalPlayer.Backpack:FindFirstChild("Gun") then
+        game.Players.LocalPlayer.Backpack:FindFirstChild("Gun").Parent = game.Players.LocalPlayer.Character
+end
+wait()
+game.Players.LocalPlayer.Character:MoveTo(savepos)
+end)
+
+ar.Name = "ar"
+ar.Parent = BuyFrame
+ar.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+ar.BorderColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+ar.Position = UDim2.new(0.487869352, 0, 0.687585771, 0)
+ar.Size = UDim2.new(0, 97, 0, 39)
+ar.Font = Enum.Font.Gotham
+ar.Text = "Buy AR"
+ar.TextColor3 = Color3.new(1, 1, 0.498039)
+ar.TextSize = 14
+ar.MouseButton1Down:connect(function()
+local savepos = game.Players.LocalPlayer.Character.UpperTorso.Position
+local lol = game.Workspace.Ignored.Shop["[AR] - $1000"]
+game.Players.LocalPlayer.Character:MoveTo(lol.Head.Position)
+wait(0.25)
+fireclickdetector(lol.ClickDetector,4)
+wait(0.25)
+if game.Players.LocalPlayer.Backpack:FindFirstChild("Gun") then
+        game.Players.LocalPlayer.Backpack:FindFirstChild("Gun").Parent = game.Players.LocalPlayer.Character
+end
+wait()
+game.Players.LocalPlayer.Character:MoveTo(savepos)
+end)
+
+TextLabel.Parent = BuyFrame
+TextLabel.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+TextLabel.BorderColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+TextLabel.Position = UDim2.new(0.16822429, 0, 0.024490295, 0)
+TextLabel.Size = UDim2.new(0, 141, 0, 43)
+TextLabel.Font = Enum.Font.SciFi
+TextLabel.Text = "Aspect Buy Gui"
+TextLabel.TextColor3 = Color3.new(1, 1, 0.498039)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14
+TextLabel.TextWrapped = true
+
+local Toggled = false
+game:GetService("UserInputService").InputBegan:connect(function(Key, g)
+	if g then return end;
+	if Key.KeyCode == Enum.KeyCode.K then
+		if Toggled == false then
+			Toggled = true
+			BuyFrame.Visible = false
+		elseif Toggled == true then
+			Toggled = false;
+			BuyFrame.Visible = true;
+		end;
+	end;
+end)
+
